@@ -1,0 +1,56 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    margin-bottom: 100px;
+}
+legend{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+fieldset{
+    position: relative;
+    border-radius: 25px;
+    border: 2px solid black;
+    margin:auto;
+    width: 500px;
+    height: 150px;
+    background-color: lightblue;
+}
+.buttonHolder{
+  padding-left:45%;
+  padding-right:auto;
+  z-index:2;
+  position:relative;
+  display:block;
+}
+.textboxHolder{
+    margin-top:30px;
+    padding-left:10%;
+    padding-right:auto;
+    margin-bottom:30px;
+}
+label{
+    font-size: 14pt;
+    font-weight: bold;
+}
+.hiddenHint{
+    display:none;
+    width:320px;
+    margin:auto;
+    z-index:1;
+    position:relative;
+    text-align:center;
+}
+.hiddenMsg,.errorMsg{
+    display:none;
+    width:320px;
+    margin:auto;
+    z-index:1;
+    position:relative;
+     text-align:center;
+     color:black;
+     border-radius: 25px;
+     margin-top: 20px;
+     font-weight: bold;
+}
