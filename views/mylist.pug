@@ -1,0 +1,11 @@
+doctype html 
+html 
+    include courseinfo.pug
+    body 
+        p.title Retrieve continous assessment scores for:
+        .courses
+         each course in courses
+            a(href='/courseinfo/getscore?course=' + course style="margin-top:100px;margin-bottom:100px")=course
+            br
+            |
+            

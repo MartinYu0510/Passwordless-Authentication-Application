@@ -1,0 +1,23 @@
+doctype html 
+html 
+    include courseinfo.pug
+    body 
+        p.title #{course} - Gradebook
+        if(hasData)
+            .gradeTable(style="margin:auto;text-align:center;margin:auto;padding-top:50px")
+                p(style="font-size:2em") Assessment scores: 
+                table(style="border:2px solid black;margin-left:auto;margin-right:auto;width:50%;font-size:1.5em")
+                    tr
+                        th(style="background-color:#BEBEBE;border:2px solid black;width:100px") Item
+                        th(style="background-color:#BEBEBE;border:2px solid black;width:50px") Score
+                    - for (var i = 0 ; i < courseData.length; i++)
+                        tr
+                            td(style="text-align:left;border:2px solid black;width:70px;padding-left:50px")= courseData[i].assign
+                            td(style="text-align:centre;border:2px solid black;width:20px")= courseData[i].score
+                    tr 
+                        td(style="border:2px solid black") 
+                        td(style="border:2px solid black;text-align:left")
+                            span(style="font-weight:bold") Total 
+                            | #{totalScore}
+        else
+            p(style="font-size:1.5em") You do not have the gradebook for the course: #{course} in the system.
